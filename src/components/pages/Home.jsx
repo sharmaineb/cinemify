@@ -3,7 +3,7 @@ import Main from '../Main'
 import Row from '../Row'
 import requests from '../../Requests'
 
-function Home() {
+const Home = () => {
   return (
     <div>
         <Main />
