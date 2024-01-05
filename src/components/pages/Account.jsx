@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Account = () => {
+function Account() {
   return (
     <div>Account</div>
   )
