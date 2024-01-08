@@ -19,10 +19,11 @@ const Navbar = () => {
   return (
     <div className='flex items-center justify-between p-4 z-[100] w-full absolute'>
       <Link to='/'>
-        <h1 className='text-yellow-400 text-4xl font-bold cursor-pointer'>
-          Cinemify
-        </h1>
+        <h1 className='text-yellow-400 text-4xl font-bold cursor-pointer'>Cinemify.</h1>
       </Link>
+      <Link to='/discover'>
+            <h1 className='text-white text-xl font-bold cursor-pointer'>Discover</h1>
+        </Link>
       {user?.email ? (
         <div>
           <Link to='/account'>
