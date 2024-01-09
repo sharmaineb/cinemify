@@ -4,18 +4,18 @@ import { Chart } from 'chart.js/auto';
 const Charts = () => {
   useEffect(() => {
     const data = {
-      labels: ['Comedy', 'Horror', 'Drama'],
+      labels: ['Comedy', 'Horror', 'Drama', 'Action'],
       datasets: [
         {
-          label: 'My First Dataset',
-          data: [300, 50, 100],
-          backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'],
+          label: 'Total Movies Watched',
+          data: [300, 50, 100, 45],
+          backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(150, 91, 174)'],
           hoverOffset: 4,
         },
       ],
     };
 
-    // config 
+    // config
     const config = {
       type: 'doughnut',
       data: data,
@@ -33,7 +33,7 @@ const Charts = () => {
     // create the doughnut chart
     myChart = new Chart(ctx, config);
 
-    // cleanup function to destroy the chart on component unmount
+    // cleanup function
     return () => {
       if (myChart) {
         myChart.destroy();
@@ -50,6 +50,7 @@ const Charts = () => {
 };
 
 export default Charts;
+
 
 
 
