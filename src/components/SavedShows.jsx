@@ -55,7 +55,7 @@ const SavedShows = () => {
               className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'
             >
               <img
-                className='w-full h-auto block'
+                className='w-full h-auto block rounded-lg'
                 src={`https://image.tmdb.org/t/p/w500/${item?.img}`}
                 alt={item?.title}
               />
