@@ -89,13 +89,20 @@ const Charts = () => {
   }, []); // run this effect only once when the component is executed.
 
   return (
-    <div className="flex">
-      <div className="w-1/2 p-4">
-        <h2>Total Movies Watched</h2>
+    <div className="flex flex-col items-center justify-center">
+      <h1 className="pt-3 mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+          My Movie Stats:
+        </span>
+      </h1>
+      <div className="w-full lg:w-1/2 p-4">
+      <h2 class="mb-4 text-lg font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Total Movies Watched</span> Genres:</h2>
+        {/* <h2>Total Movies Watched</h2> */}
         <canvas id="moviesWatchedChart"></canvas>
       </div>
-      <div className="w-1/2 p-4">
-        <h2>Ratings Distribution Chart</h2>
+      <div className="w-full lg:w-1/2 p-4">
+      <h2 class="mb-4 text-lg font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Ratings</span> Distributions:</h2>
+        {/* <h2>Ratings Distribution Chart</h2> */}
         <canvas id="ratingsDistributionChart"></canvas>
       </div>
     </div>

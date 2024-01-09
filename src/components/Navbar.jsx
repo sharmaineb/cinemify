@@ -21,9 +21,9 @@ const Navbar = () => {
       <Link to='/'>
         <h1 className='text-yellow-400 text-4xl font-bold cursor-pointer'>Cinemify.</h1>
       </Link>
-      <Link to='/discover'>
+      {/* <Link to='/discover'>
             <h1 className='text-white text-xl font-bold cursor-pointer'>Discover</h1>
-        </Link>
+        </Link> */}
       {user?.email ? (
         <div>
           <Link to='/account'>
