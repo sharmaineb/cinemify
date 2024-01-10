@@ -2,9 +2,26 @@ import React from 'react';
 
 const LandingContent = () => {
   return (
-    <div>
+    <div className='relative'>
+      {/* background */}
+      <div className='w-full h-full'>
+        <div className='absolute w-full h-[550px] bg-gradient-to-r from-black'></div>
+        <img
+          className='w-full h-full object-cover'
+          src={`https://t4.ftcdn.net/jpg/01/42/74/69/240_F_142746987_BVWkVQgZkbpFzUnxYLjAb0hSX4owbShd.jpg`}
+          alt='/'
+        />
+      </div>
+      {/* animated text */}
+      <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+      <div className="w-max">
+        <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-5xl text-transparent bg-clip-text bg-gradient-to-r from-white to-yellow-300 font-bold">
+          Hello, Movie Lovers!
+        </h1>
+      </div>
+    </div>
       {/* hero Section */}
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white py-20 text-center">
+      <div className="bg-gradient-to-r from-white to-emerald-700 text-white py-20 text-center">
         <h1 className="text-6xl font-bold mb-4">Unlock the Magic of Cinema</h1>
         <p className="text-xl mb-8">Discover Movies Through Trailers.</p>
         <a href="/home" className="bg-white text-black py-2 px-4 rounded-full hover:bg-gray-300">Discover Now</a>
@@ -36,3 +53,4 @@ const FeatureCard = ({ title, description }) => {
 };
 
 export default LandingContent;
+

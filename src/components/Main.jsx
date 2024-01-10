@@ -19,7 +19,7 @@ const Main = () => {
     };
 
     fetchRandomMovie();
-  }, []); // Empty dependency array to fetch the random movie only once on component mount
+  }, []); // empty dependency array to fetch the random movie only once on component mount
 
   const truncateString = (str, num) => {
     if (str?.length > num) {

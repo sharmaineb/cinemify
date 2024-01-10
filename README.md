@@ -4,9 +4,11 @@
 - Chart.js is a versatile charting library.[^2].
 - The Tailwind CSS Typing Animation utility was used to create the typing animation effect in the project's landing page.[^3].
 - react-youtube library.[^4].
+- Adobe Stock 
 
 [^1]: Source: [TMDB API](https://developer.themoviedb.org/docs/getting-started) 
 [^2]: Source: [Chart.js](https://www.chartjs.org/) 
 [^3]: Source: [Tailwind Typing Animation](https://play.tailwindcss.com/q6LZjWKr97)
 [^4]: Source: [react-youtube](https://www.npmjs.com/package/react-youtube)
+[^5]: Source: [Adobe Stock](https://stock.adobe.com/)
 
