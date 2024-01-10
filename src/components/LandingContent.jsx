@@ -6,7 +6,7 @@ const LandingContent = () => {
       {/* hero Section */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white py-20 text-center">
         <h1 className="text-6xl font-bold mb-4">Unlock the Magic of Cinema</h1>
-        <p className="text-xl mb-8">Experience movies like never before with Cinemify. Discover a new dimension of entertainment.</p>
+        <p className="text-xl mb-8">Discover Movies Through Trailers.</p>
         <a href="/home" className="bg-white text-black py-2 px-4 rounded-full hover:bg-gray-300">Discover Now</a>
       </div>
 
