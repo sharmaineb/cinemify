@@ -1,13 +1,15 @@
 import React from 'react'
 import Main from '../Main'
 import Row from '../Row'
+import Search from '../Search'
 import requests from '../../Requests'
 
 const Home = () => {
   return (
     <div className='bg-[#000000]'>
         <Main />
-        <Row rowId='6' title='Search' fetchURL={requests.requestSearch} />
+        <Search />
+        {/* <Row rowId='6' title='Search' fetchURL={requests.requestSearch} /> */}
         <Row rowId='1' title='Now Playing' fetchURL={requests.requestNowPlaying} />
         <Row rowId='2' title='Upcoming' fetchURL={requests.requestUpcoming} />
         <Row rowId='3' title='Popular' fetchURL={requests.requestPopular} />
