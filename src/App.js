@@ -6,6 +6,7 @@ import Login from "./components/pages/Login";
 import SignUp from "./components/pages/SignUp";
 import Account from "./components/pages/Account";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Landing from "./components/pages/Landing";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <AuthContextProvider>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Landing />} />
+        <Route path='/home' element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />

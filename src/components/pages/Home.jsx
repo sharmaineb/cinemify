@@ -5,7 +5,7 @@ import requests from '../../Requests'
 
 const Home = () => {
   return (
-    <div>
+    <div className='bg-[#000000]'>
         <Main />
         <Row rowId='6' title='Search' fetchURL={requests.requestSearch} />
         <Row rowId='1' title='Now Playing' fetchURL={requests.requestNowPlaying} />

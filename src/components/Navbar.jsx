@@ -21,13 +21,13 @@ const Navbar = () => {
       <Link to='/'>
         <h1 className='text-yellow-400 text-4xl font-bold cursor-pointer'>Cinemify.</h1>
       </Link>
-      {/* <Link to='/discover'>
-            <h1 className='text-white text-xl font-bold cursor-pointer'>Discover</h1>
-        </Link> */}
+      <Link to='/home'>
+            <h1 className='text-yellow-500 text-xl font-bold cursor-pointer'>Discover</h1>
+        </Link>
       {user?.email ? (
         <div>
           <Link to='/account'>
-            <button className='text-white pr-4'>Dashboard</button>
+            <button className='text-black pr-4'>Dashboard</button>
           </Link>
           <button
             onClick={handleLogout}
@@ -39,7 +39,7 @@ const Navbar = () => {
       ) : (
         <div>
           <Link to='/login'>
-            <button className='text-white pr-4'>Sign In</button>
+            <button className='bg-yellow-500 px-6 py-2 rounded cursor-pointer text-white mx-3 pr-4'>Sign In</button>
           </Link>
           <Link to='/signup'>
             <button className='bg-yellow-500 px-6 py-2 rounded cursor-pointer text-white'>
