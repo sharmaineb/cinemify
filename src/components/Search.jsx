@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import requests from '../Requests';
+import Movie from './Movie';
+import Row from './Row';
 
 const Search = () => {
   const [query, setQuery] = useState('');
