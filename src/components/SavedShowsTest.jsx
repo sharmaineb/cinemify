@@ -5,7 +5,7 @@ import { db } from '../firebase';
 import { updateDoc, doc, onSnapshot } from 'firebase/firestore';
 import { AiOutlineClose } from 'react-icons/ai';
 
-const SavedShows = () => {
+const SavedShowsTest = () => {
   const [movies, setMovies] = useState([]);
   const { user } = UserAuth();
 
@@ -18,25 +18,27 @@ const SavedShows = () => {
     slider.scrollLeft = slider.scrollLeft + 500;
   };
 
-  const isGenrePresent = (movieGenres, targetGenre) => {
-    return movieGenres.some((genre) => genre.name === targetGenre);
-  };
-
   useEffect(() => {
-    onSnapshot(doc(db, 'users', `${user?.email}`), (doc) => {
-      setMovies(doc.data()?.savedShows);
+    console.log('Fetching data...');
+    const unsubscribe = onSnapshot(doc(db, 'users', `${user?.email}`), (doc) => {
+      console.log('Snapshot received:', doc.data());
+      setMovies(doc.data()?.savedShows || []);
     });
+
+    // Cleanup function
+    return () => unsubscribe();
   }, [user?.email]);
 
   const movieRef = doc(db, 'users', `${user?.email}`);
   const deleteShow = async (passedID) => {
     try {
       const result = movies.filter((item) => item.id !== passedID);
+      console.log('Deleting show with ID:', passedID);
       await updateDoc(movieRef, {
         savedShows: result,
       });
     } catch (error) {
-      console.log(error);
+      console.log('Error deleting show:', error);
     }
   };
 
@@ -67,17 +69,17 @@ const SavedShows = () => {
                   {item?.title}
                 </p>
                 <div className='flex flex-wrap justify-center items-center'>
-                  {isGenrePresent(item.genres, "Drama") && (
+                  {item?.genres && item.genres.length > 0 ? (
+                    item.genres.map((genre) => (
+                      <span key={genre.id} className='text-xs bg-gray-700 text-white rounded-full px-2 mr-2 mt-1'>
+                        {genre.name}
+                      </span>
+                    ))
+                  ) : (
                     <span className='text-xs bg-gray-700 text-white rounded-full px-2 mr-2 mt-1'>
-                      Drama
+                      No genres available
                     </span>
                   )}
-                  {isGenrePresent(item.genres, "Action") && (
-                    <span className='text-xs bg-gray-700 text-white rounded-full px-2 mr-2 mt-1'>
-                      Action
-                    </span>
-                  )}
-                  {/* Add more genres as needed */}
                 </div>
                 <p onClick={() => deleteShow(item.id)} className='absolute text-gray-300 top-4 right-4'>
                   <AiOutlineClose />
@@ -96,4 +98,6 @@ const SavedShows = () => {
   );
 };
 
-export default SavedShows;
+export default SavedShowsTest;
+
+
