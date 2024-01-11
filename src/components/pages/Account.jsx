@@ -1,8 +1,6 @@
 import React from 'react';
-// import SavedShows from '../SavedShows';
-// import Charts from '../Charts';
-import MovieChart from '../MovieChart';
-import SavedShowsTest from '../SavedShowsTest';
+import SavedShows from '../SavedShows';
+import Charts from '../Charts';
 
 const Account = () => {
   return (
@@ -13,12 +11,10 @@ const Account = () => {
         </span>
       </h1>
       <div className='w-full'>
-        <SavedShowsTest />
-        {/* <SavedShows /> */}
+        <SavedShows />
       </div>
-      {/* <Charts /> */}
       <div className=' text-white'>
-        <MovieChart />
+        <Charts />
       </div>
     </div>
   );
