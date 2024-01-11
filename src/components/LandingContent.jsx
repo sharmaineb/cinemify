@@ -5,7 +5,6 @@ const LandingContent = () => {
     <div className='relative'>
       {/* background */}
       <div className='w-full h-full'>
-        <div className='absolute w-full h-[550px] bg-gradient-to-r from-black'></div>
         <img
           className='w-full h-full object-cover'
           src={`https://t4.ftcdn.net/jpg/01/42/74/69/240_F_142746987_BVWkVQgZkbpFzUnxYLjAb0hSX4owbShd.jpg`}
@@ -15,7 +14,7 @@ const LandingContent = () => {
       {/* animated text */}
       <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
         <div className="w-max">
-          <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-5xl text-transparent bg-clip-text bg-gradient-to-r from-white to-yellow-300 font-bold">
+          <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-5xl text-transparent bg-clip-text bg-gradient-to-r from-black to-neutral-700 font-bold">
             Hello, Movie Lovers!
           </h1>
         </div>
