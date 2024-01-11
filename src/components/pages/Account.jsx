@@ -1,6 +1,7 @@
 import React from 'react';
 import SavedShows from '../SavedShows';
 import Charts from '../Charts';
+import MovieCharts from '../MovieCharts';
 
 const Account = () => {
   return (
@@ -16,6 +17,10 @@ const Account = () => {
       <div className=' text-white'>
         <Charts />
       </div>
+      <div className='text-white'>
+        <MovieCharts />
+      </div>
+
     </div>
   );
 };
