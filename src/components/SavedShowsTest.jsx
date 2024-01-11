@@ -25,7 +25,7 @@ const SavedShowsTest = () => {
       setMovies(doc.data()?.savedShows || []);
     });
 
-    // Cleanup function
+    // cleanup function
     return () => unsubscribe();
   }, [user?.email]);
 

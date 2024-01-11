@@ -7,7 +7,7 @@ const MovieChart = ({ likedMovies }) => {
   useEffect(() => {
     if (likedMovies && likedMovies.length > 0) {
       const genreCounts = likedMovies.reduce((acc, movie) => {
-        // Make sure the movie has genres property and it's an array
+      
         const movieGenres = movie.genres || [];
 
         movieGenres.forEach((genre) => {
