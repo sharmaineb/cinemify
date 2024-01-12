@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "cinemify-app"
-  }
+    "default": "cinemify-app",
+    "film-app": "cinemify-app"
+  },
+  "targets": {},
+  "etags": {}
 }
