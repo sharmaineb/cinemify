@@ -15,10 +15,10 @@ const Account = () => {
         <SavedShows />
       </div>
       <div className=' text-white'>
-        <Charts />
+        <MovieCharts />
       </div>
       <div className='text-white'>
-        <MovieCharts />
+        <Charts />
       </div>
 
     </div>

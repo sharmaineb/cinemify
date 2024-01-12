@@ -70,7 +70,7 @@ const TopMoviesChart = () => {
     };
 
     fetchTopMovies();
-  }, []); // Fetch top movies only on mount
+  }, []); 
 
   useEffect(() => {
     if (topMovies.length > 0) {
@@ -81,7 +81,7 @@ const TopMoviesChart = () => {
 
   return (
     <div className="max-w-screen-md mx-auto mt-8 bg-black p-4 rounded-md">
-      <h1 className="text-2xl font-bold text-white mb-4 text-center">Top Rated Movies</h1>
+      <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r to-indigo-500 from-emerald-600 mb-4 text-center">Top Rated Movies</h1>
       <canvas ref={chartRef} id="topMoviesChart" width="800" height="400"></canvas>
     </div>
   );
