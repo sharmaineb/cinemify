@@ -22,7 +22,7 @@ Cinemify is a movie showcase and exploration platform that leverages The Movie D
 
 ### Installation
 
-1. Clone the repository: `git clone [https://github.com/sharmaineb/cinemify]`
+1. Clone the repository: `git clone https://github.com/sharmaineb/cinemify`
 2. Navigate to the project directory: `cd cinemify`
 3. Install dependencies: `npm install`
 4. Set up TMDB API key: Follow the [TMDB API documentation](https://developer.themoviedb.org/docs/getting-started) to obtain an API key. Add the key to the project configuration.
